@@ -1,21 +1,20 @@
 [
   {
-    "event_id": "evt_00049",
-    "timestamp": "2026-08-01T09:45:00",
+    "event_id": "evt_00102",
+    "timestamp": "2026-08-01T10:16:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_4188",
-    "amount": 10742.63,
-    "payment_method": "card",
+    "customer_id": "cust_4691",
+    "amount": 7332.27,
+    "payment_method": "wallet",
     "instrument_details": {
-      "card_network": "Mastercard",
-      "card_expiry": "12/28"
+      "wallet_provider": "AmazonPay"
     },
-    "retry_count": 0,
-    "latency_ms": 327,
-    "acquirer_bank": "Axis Bank",
+    "retry_count": 2,
+    "latency_ms": 361,
+    "acquirer_bank": "HDFC Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "issuer_decline"
+    "error_code": "INVALID_UPI_HANDLE",
+    "degradation_type": "expired_instrument"
   },
   {
     "event_id": "evt_00024",
@@ -54,7 +53,7 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00055",
+    "event_id": "evt_00056",
     "timestamp": "2026-08-01T11:40:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2953",
@@ -69,6 +68,24 @@
     "status": "degraded",
     "error_code": "EXPIRED_CARD",
     "degradation_type": "expired_instrument"
+  },
+  {
+    "event_id": "evt_00049",
+    "timestamp": "2026-08-01T12:20:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2002",
+    "amount": 18926.39,
+    "payment_method": "card",
+    "instrument_details": {
+      "card_network": "Visa",
+      "card_expiry": "01/28"
+    },
+    "retry_count": 2,
+    "latency_ms": 624,
+    "acquirer_bank": "Yes Bank",
+    "status": "degraded",
+    "error_code": "INSUFFICIENT_FUNDS",
+    "degradation_type": "insufficient_funds"
   },
   {
     "event_id": "evt_00128",
@@ -88,7 +105,7 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00057",
+    "event_id": "evt_00058",
     "timestamp": "2026-08-01T12:40:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3424",
@@ -105,7 +122,7 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00067",
+    "event_id": "evt_00068",
     "timestamp": "2026-08-01T12:55:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4485",
@@ -122,7 +139,7 @@
     "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00060",
+    "event_id": "evt_00061",
     "timestamp": "2026-08-01T13:14:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1816",
@@ -158,24 +175,41 @@
     "degradation_type": "fraud_hold"
   },
   {
-    "event_id": "evt_00106",
-    "timestamp": "2026-08-01T13:33:00",
+    "event_id": "evt_00112",
+    "timestamp": "2026-08-01T14:04:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_3999",
-    "amount": 3458.01,
+    "customer_id": "cust_3017",
+    "amount": 3078.79,
     "payment_method": "netbanking",
     "instrument_details": {
-      "bank_name": "ICICI Bank"
+      "bank_name": "SBI"
     },
-    "retry_count": 1,
-    "latency_ms": 534,
-    "acquirer_bank": "Yes Bank",
+    "retry_count": 3,
+    "latency_ms": 750,
+    "acquirer_bank": "ICICI Bank",
     "status": "degraded",
-    "error_code": "EXPIRED_CARD",
+    "error_code": "INVALID_UPI_HANDLE",
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00058",
+    "event_id": "evt_00039",
+    "timestamp": "2026-08-01T14:17:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1911",
+    "amount": 5148.41,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "PhonePe Wallet"
+    },
+    "retry_count": 0,
+    "latency_ms": 4193,
+    "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "GATEWAY_TIMEOUT",
+    "degradation_type": "network_timeout"
+  },
+  {
+    "event_id": "evt_00059",
     "timestamp": "2026-08-01T15:51:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2552",
@@ -188,7 +222,7 @@
     "latency_ms": 1639,
     "acquirer_bank": "SBI",
     "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
+    "error_code": "INSUFFICIENT_FUNDS",
     "degradation_type": "ambiguous"
   },
   {
@@ -244,7 +278,7 @@
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00054",
+    "event_id": "evt_00055",
     "timestamp": "2026-08-01T17:46:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2669",
@@ -259,24 +293,6 @@
     "status": "degraded",
     "error_code": "NO_RESPONSE",
     "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00116",
-    "timestamp": "2026-08-01T18:22:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3401",
-    "amount": 5554.59,
-    "payment_method": "upi",
-    "instrument_details": {
-      "upi_handle": "user4817@oksbi",
-      "valid": true
-    },
-    "retry_count": 0,
-    "latency_ms": 274,
-    "acquirer_bank": "Kotak Bank",
-    "status": "degraded",
-    "error_code": "BANK_DECLINE_51",
-    "degradation_type": "issuer_decline"
   },
   {
     "event_id": "evt_00016",
@@ -297,24 +313,7 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00043",
-    "timestamp": "2026-08-01T18:33:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3552",
-    "amount": 7984.11,
-    "payment_method": "netbanking",
-    "instrument_details": {
-      "bank_name": "HDFC Bank"
-    },
-    "retry_count": 0,
-    "latency_ms": 6672,
-    "acquirer_bank": "Kotak Bank",
-    "status": "degraded",
-    "error_code": "NO_RESPONSE",
-    "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00076",
+    "event_id": "evt_00077",
     "timestamp": "2026-08-01T19:06:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1621",
@@ -330,23 +329,6 @@
     "status": "degraded",
     "error_code": "INSUFFICIENT_FUNDS",
     "degradation_type": "insufficient_funds"
-  },
-  {
-    "event_id": "evt_00100",
-    "timestamp": "2026-08-01T19:46:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3538",
-    "amount": 17140.74,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "PhonePe Wallet"
-    },
-    "retry_count": 0,
-    "latency_ms": 6080,
-    "acquirer_bank": "ICICI Bank",
-    "status": "degraded",
-    "error_code": "NO_RESPONSE",
-    "degradation_type": "network_timeout"
   },
   {
     "event_id": "evt_00150",
@@ -542,23 +524,41 @@
   },
   {
     "event_id": "evt_00125",
-    "timestamp": "2026-08-01T21:43:00",
+    "timestamp": "2026-08-01T21:27:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_1395",
-    "amount": 18664.81,
-    "payment_method": "wallet",
+    "customer_id": "cust_1381",
+    "amount": 10909.54,
+    "payment_method": "card",
     "instrument_details": {
-      "wallet_provider": "PhonePe Wallet"
+      "card_network": "RuPay",
+      "card_expiry": "01/29"
     },
     "retry_count": 0,
-    "latency_ms": 487,
+    "latency_ms": 543,
     "acquirer_bank": "Kotak Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
+    "error_code": "BANK_DECLINE_51",
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00078",
+    "event_id": "evt_00124",
+    "timestamp": "2026-08-01T21:58:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2748",
+    "amount": 7949.58,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "SBI"
+    },
+    "retry_count": 0,
+    "latency_ms": 234,
+    "acquirer_bank": "ICICI Bank",
+    "status": "degraded",
+    "error_code": "VELOCITY_LIMIT_EXCEEDED",
+    "degradation_type": "fraud_hold"
+  },
+  {
+    "event_id": "evt_00079",
     "timestamp": "2026-08-01T22:32:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3562",
@@ -576,58 +576,25 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00114",
-    "timestamp": "2026-08-01T22:33:00",
+    "event_id": "evt_00030",
+    "timestamp": "2026-08-01T22:39:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_3230",
-    "amount": 22561.07,
-    "payment_method": "netbanking",
+    "customer_id": "cust_3202",
+    "amount": 5485.23,
+    "payment_method": "card",
     "instrument_details": {
-      "bank_name": "ICICI Bank"
-    },
-    "retry_count": 1,
-    "latency_ms": 567,
-    "acquirer_bank": "HDFC Bank",
-    "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
-    "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00098",
-    "timestamp": "2026-08-01T22:43:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_1681",
-    "amount": 17410.23,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "Paytm"
+      "card_network": "RuPay",
+      "card_expiry": "02/27"
     },
     "retry_count": 0,
-    "latency_ms": 383,
-    "acquirer_bank": "SBI",
+    "latency_ms": 6334,
+    "acquirer_bank": "HDFC Bank",
     "status": "degraded",
-    "error_code": "BANK_DECLINE_51",
-    "degradation_type": "issuer_decline"
+    "error_code": "NO_RESPONSE",
+    "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00039",
-    "timestamp": "2026-08-01T23:45:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4572",
-    "amount": 1159.37,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "PhonePe Wallet"
-    },
-    "retry_count": 1,
-    "latency_ms": 427,
-    "acquirer_bank": "ICICI Bank",
-    "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
-    "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00062",
+    "event_id": "evt_00063",
     "timestamp": "2026-08-01T23:45:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4804",
@@ -659,28 +626,29 @@
     "latency_ms": 856,
     "acquirer_bank": "Yes Bank",
     "status": "degraded",
-    "error_code": "ACQUIRER_UNAVAILABLE",
+    "error_code": "GATEWAY_5XX",
     "degradation_type": "ambiguous"
   },
   {
-    "event_id": "evt_00050",
-    "timestamp": "2026-08-02T01:34:00",
+    "event_id": "evt_00028",
+    "timestamp": "2026-08-02T01:22:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_1546",
-    "amount": 17252.43,
-    "payment_method": "wallet",
+    "customer_id": "cust_3371",
+    "amount": 9084.98,
+    "payment_method": "upi",
     "instrument_details": {
-      "wallet_provider": "AmazonPay"
+      "upi_handle": "user2343@okaxis",
+      "valid": true
     },
     "retry_count": 1,
-    "latency_ms": 743,
+    "latency_ms": 873,
     "acquirer_bank": "Kotak Bank",
     "status": "degraded",
     "error_code": "INSUFFICIENT_FUNDS",
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00088",
+    "event_id": "evt_00089",
     "timestamp": "2026-08-02T01:34:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4986",
@@ -698,21 +666,21 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00109",
-    "timestamp": "2026-08-02T01:52:00",
+    "event_id": "evt_00126",
+    "timestamp": "2026-08-02T01:41:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_2509",
-    "amount": 16885.14,
+    "customer_id": "cust_2448",
+    "amount": 7071.91,
     "payment_method": "wallet",
     "instrument_details": {
-      "wallet_provider": "Paytm"
+      "wallet_provider": "PhonePe Wallet"
     },
-    "retry_count": 3,
-    "latency_ms": 468,
-    "acquirer_bank": "Kotak Bank",
+    "retry_count": 1,
+    "latency_ms": 252,
+    "acquirer_bank": "SBI",
     "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
-    "degradation_type": "expired_instrument"
+    "error_code": "INSUFFICIENT_FUNDS",
+    "degradation_type": "insufficient_funds"
   },
   {
     "event_id": "evt_00005",
@@ -732,21 +700,39 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00117",
-    "timestamp": "2026-08-02T02:44:00",
+    "event_id": "evt_00119",
+    "timestamp": "2026-08-02T02:18:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_4270",
-    "amount": 4526.53,
-    "payment_method": "netbanking",
+    "customer_id": "cust_3154",
+    "amount": 3017.5,
+    "payment_method": "wallet",
     "instrument_details": {
-      "bank_name": "Yes Bank"
+      "wallet_provider": "Paytm"
     },
     "retry_count": 0,
-    "latency_ms": 321,
-    "acquirer_bank": "ICICI Bank",
+    "latency_ms": 2602,
+    "acquirer_bank": "Axis Bank",
     "status": "degraded",
-    "error_code": "BANK_DECLINE_51",
-    "degradation_type": "issuer_decline"
+    "error_code": "INVALID_UPI_HANDLE",
+    "degradation_type": "ambiguous"
+  },
+  {
+    "event_id": "evt_00118",
+    "timestamp": "2026-08-02T02:59:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2467",
+    "amount": 19790.62,
+    "payment_method": "card",
+    "instrument_details": {
+      "card_network": "Mastercard",
+      "card_expiry": "05/28"
+    },
+    "retry_count": 0,
+    "latency_ms": 4429,
+    "acquirer_bank": "HDFC Bank",
+    "status": "degraded",
+    "error_code": "NO_RESPONSE",
+    "degradation_type": "network_timeout"
   },
   {
     "event_id": "evt_00020",
@@ -759,25 +745,26 @@
       "wallet_provider": "PhonePe Wallet"
     },
     "retry_count": 0,
-    "latency_ms": 420,
+    "latency_ms": 381,
     "acquirer_bank": "HDFC Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
+    "error_code": "BANK_DECLINE_51",
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00112",
-    "timestamp": "2026-08-02T03:31:00",
+    "event_id": "evt_00106",
+    "timestamp": "2026-08-02T03:40:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_2858",
-    "amount": 18097.78,
-    "payment_method": "wallet",
+    "customer_id": "cust_4700",
+    "amount": 7628.1,
+    "payment_method": "card",
     "instrument_details": {
-      "wallet_provider": "AmazonPay"
+      "card_network": "Visa",
+      "card_expiry": "08/27"
     },
-    "retry_count": 1,
-    "latency_ms": 753,
-    "acquirer_bank": "Axis Bank",
+    "retry_count": 2,
+    "latency_ms": 651,
+    "acquirer_bank": "HDFC Bank",
     "status": "degraded",
     "error_code": "INSUFFICIENT_FUNDS",
     "degradation_type": "insufficient_funds"
@@ -793,32 +780,50 @@
       "wallet_provider": "Paytm"
     },
     "retry_count": 0,
-    "latency_ms": 416,
+    "latency_ms": 505,
     "acquirer_bank": "Yes Bank",
-    "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "issuer_decline"
-  },
-  {
-    "event_id": "evt_00108",
-    "timestamp": "2026-08-02T04:13:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4523",
-    "amount": 16971.83,
-    "payment_method": "upi",
-    "instrument_details": {
-      "upi_handle": "user7511@oksbi",
-      "valid": true
-    },
-    "retry_count": 0,
-    "latency_ms": 474,
-    "acquirer_bank": "Axis Bank",
     "status": "degraded",
     "error_code": "BANK_DECLINE_51",
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00092",
+    "event_id": "evt_00117",
+    "timestamp": "2026-08-02T05:08:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2135",
+    "amount": 21487.47,
+    "payment_method": "card",
+    "instrument_details": {
+      "card_network": "Mastercard",
+      "card_expiry": "02/27"
+    },
+    "retry_count": 0,
+    "latency_ms": 4211,
+    "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "GATEWAY_TIMEOUT",
+    "degradation_type": "network_timeout"
+  },
+  {
+    "event_id": "evt_00122",
+    "timestamp": "2026-08-02T05:15:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1516",
+    "amount": 7019.4,
+    "payment_method": "card",
+    "instrument_details": {
+      "card_network": "RuPay",
+      "card_expiry": "10/27"
+    },
+    "retry_count": 0,
+    "latency_ms": 8141,
+    "acquirer_bank": "Kotak Bank",
+    "status": "degraded",
+    "error_code": "NO_RESPONSE",
+    "degradation_type": "network_timeout"
+  },
+  {
+    "event_id": "evt_00093",
     "timestamp": "2026-08-02T05:17:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3206",
@@ -835,25 +840,7 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00036",
-    "timestamp": "2026-08-02T05:21:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4418",
-    "amount": 9355.56,
-    "payment_method": "card",
-    "instrument_details": {
-      "card_network": "Mastercard",
-      "card_expiry": "12/27"
-    },
-    "retry_count": 0,
-    "latency_ms": 4326,
-    "acquirer_bank": "HDFC Bank",
-    "status": "degraded",
-    "error_code": "NO_RESPONSE",
-    "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00094",
+    "event_id": "evt_00095",
     "timestamp": "2026-08-02T05:46:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4951",
@@ -870,39 +857,39 @@
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00033",
-    "timestamp": "2026-08-02T06:13:00",
+    "event_id": "evt_00027",
+    "timestamp": "2026-08-02T06:29:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_2154",
-    "amount": 15198.78,
-    "payment_method": "netbanking",
+    "customer_id": "cust_4935",
+    "amount": 12793.15,
+    "payment_method": "card",
     "instrument_details": {
-      "bank_name": "Yes Bank"
+      "card_network": "Mastercard",
+      "card_expiry": "12/26"
     },
     "retry_count": 0,
-    "latency_ms": 458,
-    "acquirer_bank": "ICICI Bank",
+    "latency_ms": 406,
+    "acquirer_bank": "HDFC Bank",
     "status": "degraded",
-    "error_code": "VELOCITY_LIMIT_EXCEEDED",
+    "error_code": "RISK_HOLD_61",
     "degradation_type": "fraud_hold"
   },
   {
-    "event_id": "evt_00038",
-    "timestamp": "2026-08-02T07:11:00",
+    "event_id": "evt_00031",
+    "timestamp": "2026-08-02T06:32:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_4610",
-    "amount": 10423.9,
-    "payment_method": "upi",
+    "customer_id": "cust_4415",
+    "amount": 21341.27,
+    "payment_method": "wallet",
     "instrument_details": {
-      "upi_handle": "user3938@oksbi",
-      "valid": true
+      "wallet_provider": "PhonePe Wallet"
     },
-    "retry_count": 0,
-    "latency_ms": 1592,
+    "retry_count": 2,
+    "latency_ms": 826,
     "acquirer_bank": "Yes Bank",
     "status": "degraded",
-    "error_code": "GATEWAY_TIMEOUT",
-    "degradation_type": "ambiguous"
+    "error_code": "INSUFFICIENT_FUNDS",
+    "degradation_type": "insufficient_funds"
   },
   {
     "event_id": "evt_00025",
@@ -922,41 +909,126 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00031",
-    "timestamp": "2026-08-02T14:06:00",
+    "event_id": "evt_00099",
+    "timestamp": "2026-08-02T07:42:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_1542",
-    "amount": 23343.83,
+    "customer_id": "cust_4700",
+    "amount": 916.89,
     "payment_method": "netbanking",
     "instrument_details": {
-      "bank_name": "HDFC Bank"
-    },
-    "retry_count": 0,
-    "latency_ms": 7589,
-    "acquirer_bank": "SBI",
-    "status": "degraded",
-    "error_code": "GATEWAY_TIMEOUT",
-    "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00123",
-    "timestamp": "2026-08-02T14:21:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_2849",
-    "amount": 22223.66,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "AmazonPay"
+      "bank_name": "Axis Bank"
     },
     "retry_count": 1,
-    "latency_ms": 547,
-    "acquirer_bank": "Axis Bank",
+    "latency_ms": 257,
+    "acquirer_bank": "SBI",
     "status": "degraded",
     "error_code": "INVALID_UPI_HANDLE",
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00061",
+    "event_id": "evt_00046",
+    "timestamp": "2026-08-02T08:45:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2663",
+    "amount": 13787.84,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "HDFC Bank"
+    },
+    "retry_count": 0,
+    "latency_ms": 8751,
+    "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "NO_RESPONSE",
+    "degradation_type": "network_timeout"
+  },
+  {
+    "event_id": "evt_00038",
+    "timestamp": "2026-08-02T09:29:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_4204",
+    "amount": 23283.23,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "Yes Bank"
+    },
+    "retry_count": 0,
+    "latency_ms": 395,
+    "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "BANK_DECLINE_05",
+    "degradation_type": "issuer_decline"
+  },
+  {
+    "event_id": "evt_00043",
+    "timestamp": "2026-08-02T10:57:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1181",
+    "amount": 17776.88,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "HDFC Bank"
+    },
+    "retry_count": 0,
+    "latency_ms": 386,
+    "acquirer_bank": "Kotak Bank",
+    "status": "degraded",
+    "error_code": "RISK_HOLD_61",
+    "degradation_type": "fraud_hold"
+  },
+  {
+    "event_id": "evt_00040",
+    "timestamp": "2026-08-02T11:22:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2344",
+    "amount": 7108.36,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "Paytm"
+    },
+    "retry_count": 0,
+    "latency_ms": 474,
+    "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "VELOCITY_LIMIT_EXCEEDED",
+    "degradation_type": "fraud_hold"
+  },
+  {
+    "event_id": "evt_00033",
+    "timestamp": "2026-08-02T13:45:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1833",
+    "amount": 17248.93,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "SBI"
+    },
+    "retry_count": 0,
+    "latency_ms": 4756,
+    "acquirer_bank": "Axis Bank",
+    "status": "degraded",
+    "error_code": "GATEWAY_TIMEOUT",
+    "degradation_type": "network_timeout"
+  },
+  {
+    "event_id": "evt_00114",
+    "timestamp": "2026-08-02T14:39:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2821",
+    "amount": 23772.77,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "Paytm"
+    },
+    "retry_count": 2,
+    "latency_ms": 301,
+    "acquirer_bank": "Yes Bank",
+    "status": "degraded",
+    "error_code": "INVALID_UPI_HANDLE",
+    "degradation_type": "expired_instrument"
+  },
+  {
+    "event_id": "evt_00062",
     "timestamp": "2026-08-02T14:45:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3865",
@@ -973,43 +1045,7 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00105",
-    "timestamp": "2026-08-02T14:54:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3543",
-    "amount": 6414.54,
-    "payment_method": "upi",
-    "instrument_details": {
-      "upi_handle": "user3240@okhdfcbank",
-      "valid": true
-    },
-    "retry_count": 0,
-    "latency_ms": 425,
-    "acquirer_bank": "Yes Bank",
-    "status": "degraded",
-    "error_code": "BANK_DECLINE_51",
-    "degradation_type": "issuer_decline"
-  },
-  {
-    "event_id": "evt_00040",
-    "timestamp": "2026-08-02T15:26:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3703",
-    "amount": 4988.62,
-    "payment_method": "card",
-    "instrument_details": {
-      "card_network": "RuPay",
-      "card_expiry": "08/26"
-    },
-    "retry_count": 1,
-    "latency_ms": 271,
-    "acquirer_bank": "SBI",
-    "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
-    "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00089",
+    "event_id": "evt_00090",
     "timestamp": "2026-08-02T15:40:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2890",
@@ -1023,11 +1059,11 @@
     "latency_ms": 2201,
     "acquirer_bank": "Kotak Bank",
     "status": "degraded",
-    "error_code": "NO_RESPONSE",
+    "error_code": "EXPIRED_CARD",
     "degradation_type": "ambiguous"
   },
   {
-    "event_id": "evt_00077",
+    "event_id": "evt_00078",
     "timestamp": "2026-08-02T15:48:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2845",
@@ -1044,7 +1080,7 @@
     "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00073",
+    "event_id": "evt_00074",
     "timestamp": "2026-08-02T16:03:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1734",
@@ -1078,7 +1114,7 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00083",
+    "event_id": "evt_00084",
     "timestamp": "2026-08-02T16:15:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4132",
@@ -1096,41 +1132,7 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00110",
-    "timestamp": "2026-08-02T16:55:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_1102",
-    "amount": 15563.76,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "AmazonPay"
-    },
-    "retry_count": 0,
-    "latency_ms": 7803,
-    "acquirer_bank": "Kotak Bank",
-    "status": "degraded",
-    "error_code": "GATEWAY_TIMEOUT",
-    "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00047",
-    "timestamp": "2026-08-02T17:04:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_1920",
-    "amount": 20201.76,
-    "payment_method": "netbanking",
-    "instrument_details": {
-      "bank_name": "ICICI Bank"
-    },
-    "retry_count": 0,
-    "latency_ms": 4596,
-    "acquirer_bank": "HDFC Bank",
-    "status": "degraded",
-    "error_code": "NO_RESPONSE",
-    "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00093",
+    "event_id": "evt_00094",
     "timestamp": "2026-08-02T17:36:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1956",
@@ -1143,11 +1145,45 @@
     "latency_ms": 2061,
     "acquirer_bank": "SBI",
     "status": "degraded",
-    "error_code": "INSUFFICIENT_FUNDS",
+    "error_code": "ACQUIRER_UNAVAILABLE",
     "degradation_type": "ambiguous"
   },
   {
-    "event_id": "evt_00066",
+    "event_id": "evt_00101",
+    "timestamp": "2026-08-02T17:52:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_4738",
+    "amount": 14661.3,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "Paytm"
+    },
+    "retry_count": 0,
+    "latency_ms": 6091,
+    "acquirer_bank": "Yes Bank",
+    "status": "degraded",
+    "error_code": "NO_RESPONSE",
+    "degradation_type": "network_timeout"
+  },
+  {
+    "event_id": "evt_00100",
+    "timestamp": "2026-08-02T18:20:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_3318",
+    "amount": 17107.65,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "Paytm"
+    },
+    "retry_count": 0,
+    "latency_ms": 517,
+    "acquirer_bank": "ICICI Bank",
+    "status": "degraded",
+    "error_code": "BANK_DECLINE_51",
+    "degradation_type": "issuer_decline"
+  },
+  {
+    "event_id": "evt_00067",
     "timestamp": "2026-08-02T18:31:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2142",
@@ -1165,7 +1201,7 @@
     "degradation_type": "fraud_hold"
   },
   {
-    "event_id": "evt_00071",
+    "event_id": "evt_00072",
     "timestamp": "2026-08-02T19:19:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1494",
@@ -1183,7 +1219,7 @@
     "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00059",
+    "event_id": "evt_00060",
     "timestamp": "2026-08-02T19:26:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2926",
@@ -1194,32 +1230,31 @@
       "card_expiry": "09/27"
     },
     "retry_count": 0,
-    "latency_ms": 220,
+    "latency_ms": 586,
     "acquirer_bank": "Yes Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
+    "error_code": "BANK_DECLINE_05",
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00041",
-    "timestamp": "2026-08-02T20:39:00",
+    "event_id": "evt_00110",
+    "timestamp": "2026-08-02T20:47:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_3378",
-    "amount": 24069.85,
-    "payment_method": "upi",
+    "customer_id": "cust_4368",
+    "amount": 16035.02,
+    "payment_method": "wallet",
     "instrument_details": {
-      "upi_handle": "user6139@okaxis",
-      "valid": false
+      "wallet_provider": "PhonePe Wallet"
     },
-    "retry_count": 3,
-    "latency_ms": 311,
-    "acquirer_bank": "Kotak Bank",
+    "retry_count": 0,
+    "latency_ms": 4205,
+    "acquirer_bank": "Yes Bank",
     "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
-    "degradation_type": "expired_instrument"
+    "error_code": "NO_RESPONSE",
+    "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00080",
+    "event_id": "evt_00081",
     "timestamp": "2026-08-02T21:07:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2741",
@@ -1237,7 +1272,7 @@
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00096",
+    "event_id": "evt_00097",
     "timestamp": "2026-08-02T21:11:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3552",
@@ -1264,14 +1299,14 @@
       "bank_name": "ICICI Bank"
     },
     "retry_count": 0,
-    "latency_ms": 1578,
+    "latency_ms": 2550,
     "acquirer_bank": "HDFC Bank",
     "status": "degraded",
-    "error_code": "VELOCITY_LIMIT_EXCEEDED",
+    "error_code": "EXPIRED_CARD",
     "degradation_type": "ambiguous"
   },
   {
-    "event_id": "evt_00056",
+    "event_id": "evt_00057",
     "timestamp": "2026-08-02T22:15:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2989",
@@ -1288,25 +1323,25 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00104",
-    "timestamp": "2026-08-02T22:28:00",
+    "event_id": "evt_00115",
+    "timestamp": "2026-08-02T22:40:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_3318",
-    "amount": 21652.67,
-    "payment_method": "card",
+    "customer_id": "cust_4965",
+    "amount": 3228.56,
+    "payment_method": "upi",
     "instrument_details": {
-      "card_network": "Visa",
-      "card_expiry": "06/28"
+      "upi_handle": "user8450@okhdfcbank",
+      "valid": true
     },
-    "retry_count": 1,
-    "latency_ms": 2986,
-    "acquirer_bank": "SBI",
+    "retry_count": 0,
+    "latency_ms": 225,
+    "acquirer_bank": "ICICI Bank",
     "status": "degraded",
-    "error_code": "GATEWAY_TIMEOUT",
-    "degradation_type": "ambiguous"
+    "error_code": "RISK_HOLD_61",
+    "degradation_type": "fraud_hold"
   },
   {
-    "event_id": "evt_00068",
+    "event_id": "evt_00069",
     "timestamp": "2026-08-02T22:43:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3116",
@@ -1324,7 +1359,7 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00052",
+    "event_id": "evt_00053",
     "timestamp": "2026-08-02T22:51:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3567",
@@ -1358,7 +1393,7 @@
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00074",
+    "event_id": "evt_00075",
     "timestamp": "2026-08-03T00:53:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3612",
@@ -1376,6 +1411,23 @@
     "degradation_type": "network_timeout"
   },
   {
+    "event_id": "evt_00107",
+    "timestamp": "2026-08-03T01:17:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_4061",
+    "amount": 10503.48,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "ICICI Bank"
+    },
+    "retry_count": 2,
+    "latency_ms": 335,
+    "acquirer_bank": "Kotak Bank",
+    "status": "degraded",
+    "error_code": "INVALID_UPI_HANDLE",
+    "degradation_type": "expired_instrument"
+  },
+  {
     "event_id": "evt_00026",
     "timestamp": "2026-08-03T01:30:00",
     "merchant_id": "MERCH_001",
@@ -1387,48 +1439,32 @@
       "valid": true
     },
     "retry_count": 0,
-    "latency_ms": 444,
+    "latency_ms": 457,
     "acquirer_bank": "HDFC Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
+    "error_code": "BANK_DECLINE_51",
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00030",
-    "timestamp": "2026-08-03T01:57:00",
+    "event_id": "evt_00032",
+    "timestamp": "2026-08-03T01:52:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_2295",
-    "amount": 23238.65,
-    "payment_method": "wallet",
+    "customer_id": "cust_4845",
+    "amount": 10634.84,
+    "payment_method": "card",
     "instrument_details": {
-      "wallet_provider": "Paytm"
+      "card_network": "RuPay",
+      "card_expiry": "01/27"
     },
-    "retry_count": 0,
-    "latency_ms": 237,
-    "acquirer_bank": "Axis Bank",
+    "retry_count": 1,
+    "latency_ms": 309,
+    "acquirer_bank": "Yes Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "fraud_hold"
+    "error_code": "INSUFFICIENT_FUNDS",
+    "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00045",
-    "timestamp": "2026-08-03T02:05:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3244",
-    "amount": 20875.38,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "PhonePe Wallet"
-    },
-    "retry_count": 2,
-    "latency_ms": 493,
-    "acquirer_bank": "ICICI Bank",
-    "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
-    "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00063",
+    "event_id": "evt_00064",
     "timestamp": "2026-08-03T02:10:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4261",
@@ -1446,42 +1482,7 @@
     "degradation_type": "fraud_hold"
   },
   {
-    "event_id": "evt_00111",
-    "timestamp": "2026-08-03T02:15:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_1477",
-    "amount": 3665.47,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "Paytm"
-    },
-    "retry_count": 0,
-    "latency_ms": 320,
-    "acquirer_bank": "Axis Bank",
-    "status": "degraded",
-    "error_code": "BANK_DECLINE_05",
-    "degradation_type": "issuer_decline"
-  },
-  {
-    "event_id": "evt_00032",
-    "timestamp": "2026-08-03T02:18:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3735",
-    "amount": 20463.18,
-    "payment_method": "card",
-    "instrument_details": {
-      "card_network": "RuPay",
-      "card_expiry": "08/28"
-    },
-    "retry_count": 0,
-    "latency_ms": 4876,
-    "acquirer_bank": "ICICI Bank",
-    "status": "degraded",
-    "error_code": "GATEWAY_TIMEOUT",
-    "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00081",
+    "event_id": "evt_00082",
     "timestamp": "2026-08-03T02:59:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2798",
@@ -1496,6 +1497,40 @@
     "status": "degraded",
     "error_code": "INVALID_UPI_HANDLE",
     "degradation_type": "expired_instrument"
+  },
+  {
+    "event_id": "evt_00036",
+    "timestamp": "2026-08-03T03:05:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_4682",
+    "amount": 23339.58,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "HDFC Bank"
+    },
+    "retry_count": 0,
+    "latency_ms": 252,
+    "acquirer_bank": "ICICI Bank",
+    "status": "degraded",
+    "error_code": "RISK_HOLD_61",
+    "degradation_type": "fraud_hold"
+  },
+  {
+    "event_id": "evt_00045",
+    "timestamp": "2026-08-03T03:13:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2336",
+    "amount": 10178.53,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "PhonePe Wallet"
+    },
+    "retry_count": 0,
+    "latency_ms": 7105,
+    "acquirer_bank": "ICICI Bank",
+    "status": "degraded",
+    "error_code": "NO_RESPONSE",
+    "degradation_type": "network_timeout"
   },
   {
     "event_id": "evt_00017",
@@ -1515,21 +1550,22 @@
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00124",
-    "timestamp": "2026-08-03T03:40:00",
+    "event_id": "evt_00029",
+    "timestamp": "2026-08-03T03:53:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_2280",
-    "amount": 21634.61,
-    "payment_method": "wallet",
+    "customer_id": "cust_2087",
+    "amount": 10014.49,
+    "payment_method": "upi",
     "instrument_details": {
-      "wallet_provider": "PhonePe Wallet"
+      "upi_handle": "user5915@okaxis",
+      "valid": true
     },
     "retry_count": 0,
-    "latency_ms": 356,
-    "acquirer_bank": "Yes Bank",
+    "latency_ms": 518,
+    "acquirer_bank": "HDFC Bank",
     "status": "degraded",
-    "error_code": "INSUFFICIENT_FUNDS",
-    "degradation_type": "insufficient_funds"
+    "error_code": "BANK_DECLINE_51",
+    "degradation_type": "issuer_decline"
   },
   {
     "event_id": "evt_00009",
@@ -1549,7 +1585,24 @@
     "degradation_type": "fraud_hold"
   },
   {
-    "event_id": "evt_00086",
+    "event_id": "evt_00047",
+    "timestamp": "2026-08-03T04:59:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2809",
+    "amount": 11164.56,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "Paytm"
+    },
+    "retry_count": 1,
+    "latency_ms": 847,
+    "acquirer_bank": "Axis Bank",
+    "status": "degraded",
+    "error_code": "GATEWAY_TIMEOUT",
+    "degradation_type": "ambiguous"
+  },
+  {
+    "event_id": "evt_00087",
     "timestamp": "2026-08-03T05:08:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4973",
@@ -1567,39 +1620,22 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00118",
-    "timestamp": "2026-08-03T05:12:00",
+    "event_id": "evt_00111",
+    "timestamp": "2026-08-03T05:47:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_1713",
-    "amount": 6780.11,
-    "payment_method": "card",
+    "customer_id": "cust_3652",
+    "amount": 1766.78,
+    "payment_method": "upi",
     "instrument_details": {
-      "card_network": "Mastercard",
-      "card_expiry": "10/28"
+      "upi_handle": "user8606@oksbi",
+      "valid": true
     },
     "retry_count": 0,
-    "latency_ms": 232,
-    "acquirer_bank": "Kotak Bank",
+    "latency_ms": 223,
+    "acquirer_bank": "Axis Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
+    "error_code": "BANK_DECLINE_05",
     "degradation_type": "issuer_decline"
-  },
-  {
-    "event_id": "evt_00122",
-    "timestamp": "2026-08-03T05:23:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3446",
-    "amount": 13356.81,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "AmazonPay"
-    },
-    "retry_count": 1,
-    "latency_ms": 717,
-    "acquirer_bank": "Kotak Bank",
-    "status": "degraded",
-    "error_code": "EXPIRED_CARD",
-    "degradation_type": "expired_instrument"
   },
   {
     "event_id": "evt_00135",
@@ -1792,43 +1828,43 @@
     "degradation_type": "acquirer_outage"
   },
   {
-    "event_id": "evt_00126",
-    "timestamp": "2026-08-03T06:00:00",
+    "event_id": "evt_00041",
+    "timestamp": "2026-08-03T06:12:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_2682",
-    "amount": 7071.91,
+    "customer_id": "cust_1472",
+    "amount": 21949.55,
     "payment_method": "card",
     "instrument_details": {
-      "card_network": "Amex",
-      "card_expiry": "10/28"
+      "card_network": "RuPay",
+      "card_expiry": "03/27"
     },
-    "retry_count": 1,
-    "latency_ms": 252,
+    "retry_count": 0,
+    "latency_ms": 505,
     "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "BANK_DECLINE_05",
+    "degradation_type": "issuer_decline"
+  },
+  {
+    "event_id": "evt_00116",
+    "timestamp": "2026-08-03T06:32:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1515",
+    "amount": 11570.86,
+    "payment_method": "upi",
+    "instrument_details": {
+      "upi_handle": "user4362@okhdfcbank",
+      "valid": true
+    },
+    "retry_count": 0,
+    "latency_ms": 767,
+    "acquirer_bank": "ICICI Bank",
     "status": "degraded",
     "error_code": "INSUFFICIENT_FUNDS",
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00035",
-    "timestamp": "2026-08-03T06:32:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3609",
-    "amount": 24497.99,
-    "payment_method": "upi",
-    "instrument_details": {
-      "upi_handle": "user2832@okhdfcbank",
-      "valid": false
-    },
-    "retry_count": 3,
-    "latency_ms": 764,
-    "acquirer_bank": "Yes Bank",
-    "status": "degraded",
-    "error_code": "EXPIRED_CARD",
-    "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00053",
+    "event_id": "evt_00054",
     "timestamp": "2026-08-03T06:51:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4657",
@@ -1863,38 +1899,21 @@
     "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00102",
-    "timestamp": "2026-08-03T08:10:00",
+    "event_id": "evt_00037",
+    "timestamp": "2026-08-03T09:17:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_3617",
-    "amount": 24057.32,
-    "payment_method": "netbanking",
-    "instrument_details": {
-      "bank_name": "Yes Bank"
-    },
-    "retry_count": 0,
-    "latency_ms": 7151,
-    "acquirer_bank": "Axis Bank",
-    "status": "degraded",
-    "error_code": "GATEWAY_TIMEOUT",
-    "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00021",
-    "timestamp": "2026-08-03T09:22:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_2683",
-    "amount": 11781.21,
+    "customer_id": "cust_4988",
+    "amount": 15591.41,
     "payment_method": "wallet",
     "instrument_details": {
-      "wallet_provider": "AmazonPay"
+      "wallet_provider": "Paytm"
     },
     "retry_count": 0,
-    "latency_ms": 231,
-    "acquirer_bank": "Yes Bank",
+    "latency_ms": 4203,
+    "acquirer_bank": "ICICI Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "fraud_hold"
+    "error_code": "NO_RESPONSE",
+    "degradation_type": "network_timeout"
   },
   {
     "event_id": "evt_00007",
@@ -1915,42 +1934,24 @@
     "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00037",
-    "timestamp": "2026-08-03T09:51:00",
+    "event_id": "evt_00104",
+    "timestamp": "2026-08-03T10:00:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_3793",
-    "amount": 6387.34,
-    "payment_method": "upi",
-    "instrument_details": {
-      "upi_handle": "user2684@oksbi",
-      "valid": true
-    },
-    "retry_count": 0,
-    "latency_ms": 321,
-    "acquirer_bank": "Axis Bank",
-    "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "fraud_hold"
-  },
-  {
-    "event_id": "evt_00107",
-    "timestamp": "2026-08-03T10:57:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4401",
-    "amount": 4279.7,
+    "customer_id": "cust_3864",
+    "amount": 7520.72,
     "payment_method": "netbanking",
     "instrument_details": {
-      "bank_name": "Axis Bank"
+      "bank_name": "Yes Bank"
     },
-    "retry_count": 1,
-    "latency_ms": 502,
-    "acquirer_bank": "Yes Bank",
+    "retry_count": 0,
+    "latency_ms": 510,
+    "acquirer_bank": "SBI",
     "status": "degraded",
-    "error_code": "EXPIRED_CARD",
-    "degradation_type": "expired_instrument"
+    "error_code": "BANK_DECLINE_05",
+    "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00070",
+    "event_id": "evt_00071",
     "timestamp": "2026-08-03T11:23:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3267",
@@ -1965,23 +1966,6 @@
     "status": "degraded",
     "error_code": "INVALID_UPI_HANDLE",
     "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00099",
-    "timestamp": "2026-08-03T12:10:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_1596",
-    "amount": 6255.1,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "PhonePe Wallet"
-    },
-    "retry_count": 0,
-    "latency_ms": 5434,
-    "acquirer_bank": "Yes Bank",
-    "status": "degraded",
-    "error_code": "GATEWAY_TIMEOUT",
-    "degradation_type": "network_timeout"
   },
   {
     "event_id": "evt_00008",
@@ -2001,21 +1985,38 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00044",
-    "timestamp": "2026-08-03T15:56:00",
+    "event_id": "evt_00109",
+    "timestamp": "2026-08-03T15:15:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_3270",
-    "amount": 3355.74,
+    "customer_id": "cust_1369",
+    "amount": 19807.91,
     "payment_method": "netbanking",
     "instrument_details": {
-      "bank_name": "Axis Bank"
+      "bank_name": "HDFC Bank"
     },
     "retry_count": 0,
-    "latency_ms": 491,
-    "acquirer_bank": "Axis Bank",
+    "latency_ms": 388,
+    "acquirer_bank": "Kotak Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "fraud_hold"
+    "error_code": "BANK_DECLINE_51",
+    "degradation_type": "issuer_decline"
+  },
+  {
+    "event_id": "evt_00121",
+    "timestamp": "2026-08-03T15:50:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_3810",
+    "amount": 2876.45,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "AmazonPay"
+    },
+    "retry_count": 0,
+    "latency_ms": 511,
+    "acquirer_bank": "HDFC Bank",
+    "status": "degraded",
+    "error_code": "BANK_DECLINE_51",
+    "degradation_type": "issuer_decline"
   },
   {
     "event_id": "evt_00022",
@@ -2035,25 +2036,7 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00028",
-    "timestamp": "2026-08-03T16:07:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4856",
-    "amount": 22278.13,
-    "payment_method": "card",
-    "instrument_details": {
-      "card_network": "Mastercard",
-      "card_expiry": "05/28"
-    },
-    "retry_count": 0,
-    "latency_ms": 414,
-    "acquirer_bank": "HDFC Bank",
-    "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "fraud_hold"
-  },
-  {
-    "event_id": "evt_00085",
+    "event_id": "evt_00086",
     "timestamp": "2026-08-03T17:12:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2180",
@@ -2070,7 +2053,7 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00091",
+    "event_id": "evt_00092",
     "timestamp": "2026-08-03T17:39:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4826",
@@ -2083,11 +2066,151 @@
     "latency_ms": 2904,
     "acquirer_bank": "SBI",
     "status": "degraded",
-    "error_code": "NO_RESPONSE",
+    "error_code": "EXPIRED_CARD",
     "degradation_type": "ambiguous"
   },
   {
-    "event_id": "evt_00065",
+    "event_id": "evt_00113",
+    "timestamp": "2026-08-03T18:13:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_4626",
+    "amount": 10488.14,
+    "payment_method": "upi",
+    "instrument_details": {
+      "upi_handle": "user2622@okaxis",
+      "valid": true
+    },
+    "retry_count": 0,
+    "latency_ms": 7035,
+    "acquirer_bank": "Axis Bank",
+    "status": "degraded",
+    "error_code": "GATEWAY_TIMEOUT",
+    "degradation_type": "network_timeout"
+  },
+  {
+    "event_id": "evt_00034",
+    "timestamp": "2026-08-03T18:49:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1180",
+    "amount": 286.93,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "ICICI Bank"
+    },
+    "retry_count": 0,
+    "latency_ms": 482,
+    "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "BANK_DECLINE_51",
+    "degradation_type": "issuer_decline"
+  },
+  {
+    "event_id": "evt_00021",
+    "timestamp": "2026-08-03T18:49:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2912",
+    "amount": 21622.15,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "Paytm"
+    },
+    "retry_count": 0,
+    "latency_ms": 231,
+    "acquirer_bank": "Yes Bank",
+    "status": "degraded",
+    "error_code": "RISK_HOLD_61",
+    "degradation_type": "fraud_hold"
+  },
+  {
+    "event_id": "evt_00103",
+    "timestamp": "2026-08-03T18:55:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_2871",
+    "amount": 21162.54,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "ICICI Bank"
+    },
+    "retry_count": 0,
+    "latency_ms": 395,
+    "acquirer_bank": "Axis Bank",
+    "status": "degraded",
+    "error_code": "BANK_DECLINE_05",
+    "degradation_type": "issuer_decline"
+  },
+  {
+    "event_id": "evt_00035",
+    "timestamp": "2026-08-03T19:23:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1458",
+    "amount": 7548.78,
+    "payment_method": "card",
+    "instrument_details": {
+      "card_network": "Mastercard",
+      "card_expiry": "04/28"
+    },
+    "retry_count": 1,
+    "latency_ms": 236,
+    "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "INSUFFICIENT_FUNDS",
+    "degradation_type": "insufficient_funds"
+  },
+  {
+    "event_id": "evt_00123",
+    "timestamp": "2026-08-03T19:44:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_4248",
+    "amount": 17603.13,
+    "payment_method": "card",
+    "instrument_details": {
+      "card_network": "Amex",
+      "card_expiry": "01/26"
+    },
+    "retry_count": 2,
+    "latency_ms": 662,
+    "acquirer_bank": "ICICI Bank",
+    "status": "degraded",
+    "error_code": "INVALID_UPI_HANDLE",
+    "degradation_type": "expired_instrument"
+  },
+  {
+    "event_id": "evt_00044",
+    "timestamp": "2026-08-03T19:53:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_4886",
+    "amount": 16672.09,
+    "payment_method": "card",
+    "instrument_details": {
+      "card_network": "RuPay",
+      "card_expiry": "06/28"
+    },
+    "retry_count": 0,
+    "latency_ms": 459,
+    "acquirer_bank": "Yes Bank",
+    "status": "degraded",
+    "error_code": "BANK_DECLINE_51",
+    "degradation_type": "issuer_decline"
+  },
+  {
+    "event_id": "evt_00042",
+    "timestamp": "2026-08-03T20:19:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_3984",
+    "amount": 19702.42,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "Axis Bank"
+    },
+    "retry_count": 0,
+    "latency_ms": 495,
+    "acquirer_bank": "Kotak Bank",
+    "status": "degraded",
+    "error_code": "BANK_DECLINE_51",
+    "degradation_type": "issuer_decline"
+  },
+  {
+    "event_id": "evt_00066",
     "timestamp": "2026-08-03T20:27:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4005",
@@ -2101,11 +2224,11 @@
     "latency_ms": 1599,
     "acquirer_bank": "Axis Bank",
     "status": "degraded",
-    "error_code": "GATEWAY_5XX",
+    "error_code": "RISK_HOLD_61",
     "degradation_type": "ambiguous"
   },
   {
-    "event_id": "evt_00084",
+    "event_id": "evt_00085",
     "timestamp": "2026-08-03T20:30:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4969",
@@ -2122,7 +2245,7 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00075",
+    "event_id": "evt_00076",
     "timestamp": "2026-08-03T21:08:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1755",
@@ -2137,24 +2260,6 @@
     "status": "degraded",
     "error_code": "BANK_DECLINE_51",
     "degradation_type": "issuer_decline"
-  },
-  {
-    "event_id": "evt_00046",
-    "timestamp": "2026-08-03T21:22:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3093",
-    "amount": 11934.02,
-    "payment_method": "upi",
-    "instrument_details": {
-      "upi_handle": "user3780@okhdfcbank",
-      "valid": true
-    },
-    "retry_count": 0,
-    "latency_ms": 247,
-    "acquirer_bank": "Kotak Bank",
-    "status": "degraded",
-    "error_code": "VELOCITY_LIMIT_EXCEEDED",
-    "degradation_type": "fraud_hold"
   },
   {
     "event_id": "evt_00003",
@@ -2174,7 +2279,7 @@
     "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00079",
+    "event_id": "evt_00080",
     "timestamp": "2026-08-03T22:30:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2192",
@@ -2191,39 +2296,22 @@
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00115",
-    "timestamp": "2026-08-03T23:05:00",
+    "event_id": "evt_00120",
+    "timestamp": "2026-08-03T22:42:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_3714",
-    "amount": 5459.22,
-    "payment_method": "card",
+    "customer_id": "cust_4872",
+    "amount": 15453.65,
+    "payment_method": "upi",
     "instrument_details": {
-      "card_network": "Visa",
-      "card_expiry": "11/26"
+      "upi_handle": "user9543@oksbi",
+      "valid": true
     },
     "retry_count": 0,
-    "latency_ms": 305,
-    "acquirer_bank": "ICICI Bank",
+    "latency_ms": 445,
+    "acquirer_bank": "Yes Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
+    "error_code": "BANK_DECLINE_05",
     "degradation_type": "issuer_decline"
-  },
-  {
-    "event_id": "evt_00048",
-    "timestamp": "2026-08-03T23:10:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4629",
-    "amount": 15817.18,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "Paytm"
-    },
-    "retry_count": 3,
-    "latency_ms": 593,
-    "acquirer_bank": "Axis Bank",
-    "status": "degraded",
-    "error_code": "EXPIRED_CARD",
-    "degradation_type": "expired_instrument"
   },
   {
     "event_id": "evt_00010",
@@ -2244,24 +2332,7 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00101",
-    "timestamp": "2026-08-03T23:44:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_3731",
-    "amount": 13834.15,
-    "payment_method": "netbanking",
-    "instrument_details": {
-      "bank_name": "Axis Bank"
-    },
-    "retry_count": 0,
-    "latency_ms": 494,
-    "acquirer_bank": "Yes Bank",
-    "status": "degraded",
-    "error_code": "INSUFFICIENT_FUNDS",
-    "degradation_type": "insufficient_funds"
-  },
-  {
-    "event_id": "evt_00090",
+    "event_id": "evt_00091",
     "timestamp": "2026-08-04T01:28:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_2870",
@@ -2275,46 +2346,28 @@
     "latency_ms": 785,
     "acquirer_bank": "Kotak Bank",
     "status": "degraded",
-    "error_code": "RISK_HOLD_61",
+    "error_code": "GATEWAY_TIMEOUT",
     "degradation_type": "ambiguous"
   },
   {
-    "event_id": "evt_00119",
-    "timestamp": "2026-08-04T02:01:00",
+    "event_id": "evt_00108",
+    "timestamp": "2026-08-04T02:47:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_4186",
-    "amount": 5867.26,
-    "payment_method": "wallet",
+    "customer_id": "cust_4057",
+    "amount": 21784.84,
+    "payment_method": "netbanking",
     "instrument_details": {
-      "wallet_provider": "AmazonPay"
-    },
-    "retry_count": 2,
-    "latency_ms": 311,
-    "acquirer_bank": "Axis Bank",
-    "status": "degraded",
-    "error_code": "INSUFFICIENT_FUNDS",
-    "degradation_type": "insufficient_funds"
-  },
-  {
-    "event_id": "evt_00103",
-    "timestamp": "2026-08-04T02:58:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_1971",
-    "amount": 9656.83,
-    "payment_method": "card",
-    "instrument_details": {
-      "card_network": "RuPay",
-      "card_expiry": "05/28"
+      "bank_name": "HDFC Bank"
     },
     "retry_count": 0,
-    "latency_ms": 7242,
-    "acquirer_bank": "Yes Bank",
+    "latency_ms": 546,
+    "acquirer_bank": "HDFC Bank",
     "status": "degraded",
-    "error_code": "GATEWAY_TIMEOUT",
-    "degradation_type": "network_timeout"
+    "error_code": "BANK_DECLINE_05",
+    "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00072",
+    "event_id": "evt_00073",
     "timestamp": "2026-08-04T03:06:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3967",
@@ -2331,7 +2384,7 @@
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00097",
+    "event_id": "evt_00098",
     "timestamp": "2026-08-04T03:37:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_3529",
@@ -2342,65 +2395,14 @@
       "card_expiry": "05/27"
     },
     "retry_count": 0,
-    "latency_ms": 560,
+    "latency_ms": 427,
     "acquirer_bank": "Axis Bank",
-    "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "issuer_decline"
-  },
-  {
-    "event_id": "evt_00034",
-    "timestamp": "2026-08-04T03:42:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4708",
-    "amount": 22721.34,
-    "payment_method": "netbanking",
-    "instrument_details": {
-      "bank_name": "HDFC Bank"
-    },
-    "retry_count": 1,
-    "latency_ms": 294,
-    "acquirer_bank": "Yes Bank",
-    "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
-    "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00113",
-    "timestamp": "2026-08-04T03:48:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4846",
-    "amount": 23796.73,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "Paytm"
-    },
-    "retry_count": 2,
-    "latency_ms": 579,
-    "acquirer_bank": "ICICI Bank",
-    "status": "degraded",
-    "error_code": "INVALID_UPI_HANDLE",
-    "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00121",
-    "timestamp": "2026-08-04T03:56:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_1301",
-    "amount": 22500.82,
-    "payment_method": "wallet",
-    "instrument_details": {
-      "wallet_provider": "PhonePe Wallet"
-    },
-    "retry_count": 0,
-    "latency_ms": 340,
-    "acquirer_bank": "ICICI Bank",
     "status": "degraded",
     "error_code": "BANK_DECLINE_05",
     "degradation_type": "issuer_decline"
   },
   {
-    "event_id": "evt_00069",
+    "event_id": "evt_00070",
     "timestamp": "2026-08-04T04:00:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4247",
@@ -2417,7 +2419,7 @@
     "degradation_type": "fraud_hold"
   },
   {
-    "event_id": "evt_00082",
+    "event_id": "evt_00083",
     "timestamp": "2026-08-04T04:25:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1329",
@@ -2434,7 +2436,41 @@
     "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00087",
+    "event_id": "evt_00050",
+    "timestamp": "2026-08-04T04:29:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1999",
+    "amount": 3858.77,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "AmazonPay"
+    },
+    "retry_count": 0,
+    "latency_ms": 1396,
+    "acquirer_bank": "HDFC Bank",
+    "status": "degraded",
+    "error_code": "INSUFFICIENT_FUNDS",
+    "degradation_type": "ambiguous"
+  },
+  {
+    "event_id": "evt_00105",
+    "timestamp": "2026-08-04T04:49:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_4177",
+    "amount": 20010.73,
+    "payment_method": "netbanking",
+    "instrument_details": {
+      "bank_name": "Kotak Bank"
+    },
+    "retry_count": 0,
+    "latency_ms": 328,
+    "acquirer_bank": "ICICI Bank",
+    "status": "degraded",
+    "error_code": "RISK_HOLD_61",
+    "degradation_type": "fraud_hold"
+  },
+  {
+    "event_id": "evt_00088",
     "timestamp": "2026-08-04T05:03:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4112",
@@ -2451,25 +2487,7 @@
     "degradation_type": "network_timeout"
   },
   {
-    "event_id": "evt_00027",
-    "timestamp": "2026-08-04T05:39:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_1232",
-    "amount": 24026.32,
-    "payment_method": "upi",
-    "instrument_details": {
-      "upi_handle": "user2312@okicici",
-      "valid": true
-    },
-    "retry_count": 0,
-    "latency_ms": 320,
-    "acquirer_bank": "Kotak Bank",
-    "status": "degraded",
-    "error_code": "RISK_HOLD_61",
-    "degradation_type": "issuer_decline"
-  },
-  {
-    "event_id": "evt_00051",
+    "event_id": "evt_00052",
     "timestamp": "2026-08-04T05:55:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_4402",
@@ -2486,7 +2504,7 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00064",
+    "event_id": "evt_00065",
     "timestamp": "2026-08-04T06:04:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1051",
@@ -2539,59 +2557,41 @@
     "degradation_type": "insufficient_funds"
   },
   {
-    "event_id": "evt_00042",
-    "timestamp": "2026-08-04T06:49:00",
+    "event_id": "evt_00048",
+    "timestamp": "2026-08-04T07:22:00",
     "merchant_id": "MERCH_001",
-    "customer_id": "cust_2577",
-    "amount": 22506.72,
-    "payment_method": "card",
-    "instrument_details": {
-      "card_network": "Mastercard",
-      "card_expiry": "02/26"
-    },
-    "retry_count": 2,
-    "latency_ms": 245,
-    "acquirer_bank": "Yes Bank",
-    "status": "degraded",
-    "error_code": "EXPIRED_CARD",
-    "degradation_type": "expired_instrument"
-  },
-  {
-    "event_id": "evt_00120",
-    "timestamp": "2026-08-04T08:11:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_2876",
-    "amount": 16153.85,
+    "customer_id": "cust_1382",
+    "amount": 20495.9,
     "payment_method": "netbanking",
     "instrument_details": {
-      "bank_name": "Yes Bank"
+      "bank_name": "ICICI Bank"
     },
-    "retry_count": 1,
-    "latency_ms": 262,
-    "acquirer_bank": "Axis Bank",
+    "retry_count": 0,
+    "latency_ms": 5207,
+    "acquirer_bank": "SBI",
+    "status": "degraded",
+    "error_code": "GATEWAY_TIMEOUT",
+    "degradation_type": "network_timeout"
+  },
+  {
+    "event_id": "evt_00051",
+    "timestamp": "2026-08-04T07:43:00",
+    "merchant_id": "MERCH_001",
+    "customer_id": "cust_1205",
+    "amount": 14022.66,
+    "payment_method": "wallet",
+    "instrument_details": {
+      "wallet_provider": "PhonePe Wallet"
+    },
+    "retry_count": 3,
+    "latency_ms": 667,
+    "acquirer_bank": "ICICI Bank",
     "status": "degraded",
     "error_code": "INVALID_UPI_HANDLE",
     "degradation_type": "expired_instrument"
   },
   {
-    "event_id": "evt_00029",
-    "timestamp": "2026-08-04T08:22:00",
-    "merchant_id": "MERCH_001",
-    "customer_id": "cust_4828",
-    "amount": 6665.99,
-    "payment_method": "netbanking",
-    "instrument_details": {
-      "bank_name": "Yes Bank"
-    },
-    "retry_count": 0,
-    "latency_ms": 5072,
-    "acquirer_bank": "ICICI Bank",
-    "status": "degraded",
-    "error_code": "NO_RESPONSE",
-    "degradation_type": "network_timeout"
-  },
-  {
-    "event_id": "evt_00095",
+    "event_id": "evt_00096",
     "timestamp": "2026-08-04T08:48:00",
     "merchant_id": "MERCH_001",
     "customer_id": "cust_1062",

@@ -21,7 +21,7 @@ PAYMENT_METHODS = ["card", "upi", "netbanking", "wallet"]
 # Error codes loosely styled after common gateway/bank decline codes.
 # Not claiming to be exact Razorpay codes -- illustrative for the demo.
 ERROR_CODES = {
-    "issuer_decline": ["BANK_DECLINE_05", "BANK_DECLINE_51", "RISK_HOLD_61"],
+    "issuer_decline": ["BANK_DECLINE_05", "BANK_DECLINE_51"],
     "network_timeout": ["GATEWAY_TIMEOUT", "NO_RESPONSE"],
     "expired_instrument": ["EXPIRED_CARD", "INVALID_UPI_HANDLE"],
     "insufficient_funds": ["INSUFFICIENT_FUNDS"],
