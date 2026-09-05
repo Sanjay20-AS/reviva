@@ -1,9 +1,17 @@
 import { useEffect, useState } from 'react'
+import Sidebar from './components/Sidebar'
 import MetricsPanel from './components/MetricsPanel'
+import Charts from './components/Charts'
 import EventStream from './components/EventStream'
 import AuditLog from './components/AuditLog'
 
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000'
+
+const TAB_TITLES = {
+  stream: 'Event Stream',
+  audit: 'Audit Trail',
+  about: 'About Reviva',
+}
 
 export default function App() {
   const [metrics, setMetrics] = useState(null)
@@ -30,57 +38,60 @@ export default function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 p-8 max-w-6xl mx-auto">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold mb-1">Reviva</h1>
-        <p className="text-slate-400">
-          Payment degradation → root cause → recovery
-        </p>
-      </header>
+    <div className="min-h-screen bg-background flex">
+      <Sidebar active={tab} onNavigate={setTab} />
 
-      {error && (
-        <div className="bg-red-900/30 border border-red-700 rounded-lg p-4 text-red-300 mb-6">
-          Couldn't reach the backend: {error}. Make sure the FastAPI server
-          is running on {API_BASE}.
-        </div>
-      )}
-
-      {!error && !metrics && (
-        <p className="text-slate-500">Loading…</p>
-      )}
-
-      {metrics && <MetricsPanel metrics={metrics} />}
-
-      {events && (
-        <>
-          <div className="flex gap-2 mb-6 border-b border-slate-800">
-            <TabButton active={tab === 'stream'} onClick={() => setTab('stream')}>
-              Event Stream
-            </TabButton>
-            <TabButton active={tab === 'audit'} onClick={() => setTab('audit')}>
-              Audit Trail
-            </TabButton>
+      <div className="flex-1 min-w-0">
+        <header className="border-b border-border px-8 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-lg font-semibold text-zinc-100">{TAB_TITLES[tab]}</h1>
+            <p className="text-xs text-muted">
+              Payment degradation → root cause → recovery
+            </p>
           </div>
+          {metrics && (
+            <div className="text-xs text-muted">
+              {metrics.total_events} events · {metrics.recovery_rate_pct}% recovered
+            </div>
+          )}
+        </header>
 
-          {tab === 'stream' && <EventStream events={events} />}
-          {tab === 'audit' && <AuditLog events={events} />}
-        </>
-      )}
+        <main className="p-8 max-w-6xl">
+          {error && (
+            <div className="card border-red-500/30 bg-red-500/5 p-4 text-red-300 text-sm mb-6">
+              Couldn't reach the backend: {error}. Make sure the FastAPI
+              server is running on {API_BASE}.
+            </div>
+          )}
+
+          {!error && !metrics && <p className="text-muted text-sm">Loading…</p>}
+
+          {tab !== 'about' && metrics && <MetricsPanel metrics={metrics} />}
+          {tab === 'stream' && events && <Charts events={events} />}
+
+          {tab === 'stream' && events && <EventStream events={events} />}
+          {tab === 'audit' && events && <AuditLog events={events} />}
+          {tab === 'about' && <AboutPanel />}
+        </main>
+      </div>
     </div>
   )
 }
 
-function TabButton({ active, onClick, children }) {
+function AboutPanel() {
   return (
-    <button
-      onClick={onClick}
-      className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
-        active
-          ? 'border-slate-100 text-slate-100'
-          : 'border-transparent text-slate-500 hover:text-slate-300'
-      }`}
-    >
-      {children}
-    </button>
+    <div className="card p-6 max-w-2xl">
+      <h2 className="text-base font-semibold text-zinc-100 mb-2">
+        Reviva — AI Revenue Recovery
+      </h2>
+      <p className="text-sm text-muted leading-relaxed">
+        Built for the Razorpay AI Buildathon, Track 03. Reviva detects
+        degrading payments, diagnoses the likely root cause using a
+        two-layer rule + clustering engine (with Gemini assisting on
+        genuinely ambiguous cases), and executes a bounded, compliant
+        recovery action — with a full audit trail and honest, measured
+        results rather than cherry-picked wins.
+      </p>
+    </div>
   )
 }

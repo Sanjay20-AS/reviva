@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 
 export default function AuditLog({ events }) {
   const [expanded, setExpanded] = useState(null)
@@ -6,9 +6,9 @@ export default function AuditLog({ events }) {
   return (
     <div>
       <h2 className="text-lg font-semibold mb-4">Audit Trail</h2>
-      <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
+      <div className="card rounded-xl overflow-hidden">
         <table className="w-full text-sm">
-          <thead className="bg-slate-800/50 text-slate-400 text-left">
+          <thead className="bg-zinc-900/60 text-muted text-left">
             <tr>
               <th className="px-4 py-2 font-medium">Event</th>
               <th className="px-4 py-2 font-medium">Cause</th>
@@ -19,19 +19,18 @@ export default function AuditLog({ events }) {
           </thead>
           <tbody>
             {events.map((entry) => (
-              <>
+              <Fragment key={entry.event_id}>
                 <tr
-                  key={entry.event_id}
                   onClick={() =>
                     setExpanded(expanded === entry.event_id ? null : entry.event_id)
                   }
-                  className="border-t border-slate-800 hover:bg-slate-800/30 cursor-pointer"
+                  className="border-t border-border hover:bg-zinc-900/40 cursor-pointer"
                 >
-                  <td className="px-4 py-2 font-mono text-slate-400">{entry.event_id}</td>
+                  <td className="px-4 py-2 font-mono text-muted">{entry.event_id}</td>
                   <td className="px-4 py-2 capitalize">
                     {entry.diagnosis.predicted_cause.replace(/_/g, ' ')}
                   </td>
-                  <td className="px-4 py-2 text-slate-400">
+                  <td className="px-4 py-2 text-muted">
                     {entry.action.action.replace(/_/g, ' ')}
                   </td>
                   <td className="px-4 py-2">{entry.outcome.replace(/_/g, ' ')}</td>
@@ -44,16 +43,16 @@ export default function AuditLog({ events }) {
                   </td>
                 </tr>
                 {expanded === entry.event_id && (
-                  <tr className="border-t border-slate-800 bg-slate-800/20">
-                    <td colSpan={5} className="px-4 py-3 text-slate-400">
+                  <tr className="border-t border-border bg-zinc-900/30">
+                    <td colSpan={5} className="px-4 py-3 text-muted">
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <div className="text-xs text-slate-500 mb-1">Reasoning</div>
+                          <div className="text-xs text-muted mb-1">Reasoning</div>
                           <p className="text-sm">{entry.diagnosis.reasoning}</p>
                         </div>
                         <div>
-                          <div className="text-xs text-slate-500 mb-1">Signals</div>
-                          <pre className="text-xs bg-slate-950 rounded p-2 overflow-x-auto">
+                          <div className="text-xs text-muted mb-1">Signals</div>
+                          <pre className="text-xs bg-black rounded p-2 overflow-x-auto">
                             {JSON.stringify(entry.signals, null, 2)}
                           </pre>
                         </div>
@@ -61,7 +60,7 @@ export default function AuditLog({ events }) {
                     </td>
                   </tr>
                 )}
-              </>
+              </Fragment>
             ))}
           </tbody>
         </table>

@@ -1,11 +1,13 @@
-const CAUSE_COLORS = {
-  issuer_decline: 'border-l-orange-500',
-  network_timeout: 'border-l-sky-500',
-  expired_instrument: 'border-l-amber-500',
-  insufficient_funds: 'border-l-purple-500',
-  acquirer_outage: 'border-l-red-500',
-  fraud_hold: 'border-l-rose-600',
-  ambiguous: 'border-l-slate-500',
+import { Clock, Wifi, CreditCard, Wallet, ShieldAlert, ServerCrash, HelpCircle } from 'lucide-react'
+
+const CAUSE_META = {
+  issuer_decline: { color: 'border-l-orange-500', icon: CreditCard, iconColor: 'text-orange-400' },
+  network_timeout: { color: 'border-l-sky-500', icon: Wifi, iconColor: 'text-sky-400' },
+  expired_instrument: { color: 'border-l-amber-500', icon: Clock, iconColor: 'text-amber-400' },
+  insufficient_funds: { color: 'border-l-purple-500', icon: Wallet, iconColor: 'text-purple-400' },
+  acquirer_outage: { color: 'border-l-red-500', icon: ServerCrash, iconColor: 'text-red-400' },
+  fraud_hold: { color: 'border-l-rose-600', icon: ShieldAlert, iconColor: 'text-rose-400' },
+  ambiguous: { color: 'border-l-zinc-500', icon: HelpCircle, iconColor: 'text-zinc-400' },
 }
 
 const OUTCOME_STYLES = {
@@ -15,16 +17,17 @@ const OUTCOME_STYLES = {
 }
 
 export default function DiagnosisCard({ entry }) {
-  const borderColor = CAUSE_COLORS[entry.diagnosis.predicted_cause] || 'border-l-slate-500'
+  const meta = CAUSE_META[entry.diagnosis.predicted_cause] || CAUSE_META.ambiguous
+  const Icon = meta.icon
   const outcomeStyle = OUTCOME_STYLES[entry.outcome] || ''
 
   return (
-    <div className={`bg-slate-900 border border-slate-800 border-l-4 ${borderColor} rounded-lg p-4 mb-3`}>
+    <div className={`card border-l-4 ${meta.color} p-4 mb-3 transition-colors hover:border-zinc-700`}>
       <div className="flex justify-between items-start mb-2">
         <div>
-          <span className="text-sm font-mono text-slate-400">{entry.event_id}</span>
-          <span className="mx-2 text-slate-600">·</span>
-          <span className="text-sm text-slate-300">{entry.customer_id}</span>
+          <span className="text-sm font-mono text-muted">{entry.event_id}</span>
+          <span className="mx-2 text-zinc-600">·</span>
+          <span className="text-sm text-zinc-300">{entry.customer_id}</span>
         </div>
         <span className="text-sm font-semibold">
           ₹{entry.amount.toLocaleString('en-IN')}
@@ -32,6 +35,7 @@ export default function DiagnosisCard({ entry }) {
       </div>
 
       <div className="flex items-center gap-2 mb-2 flex-wrap">
+        <Icon size={15} className={meta.iconColor} />
         <span className="text-sm font-medium capitalize">
           {entry.diagnosis.predicted_cause.replace(/_/g, ' ')}
         </span>
@@ -43,11 +47,11 @@ export default function DiagnosisCard({ entry }) {
         )}
       </div>
 
-      <p className="text-sm text-slate-400 mb-3">{entry.diagnosis.reasoning}</p>
+      <p className="text-sm text-muted mb-3">{entry.diagnosis.reasoning}</p>
 
       <div className="flex justify-between items-center text-sm">
-        <span className="text-slate-500">
-          Action: <span className="text-slate-300">{entry.action.action.replace(/_/g, ' ')}</span>
+        <span className="text-muted">
+          Action: <span className="text-zinc-300">{entry.action.action.replace(/_/g, ' ')}</span>
         </span>
         <span className={`text-xs px-2 py-1 rounded border ${outcomeStyle}`}>
           {entry.outcome.replace(/_/g, ' ')}
@@ -61,7 +65,7 @@ function ConfidenceBadge({ confidence }) {
   const styles = {
     high: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
     medium: 'bg-amber-500/10 text-amber-400 border-amber-500/30',
-    low: 'bg-slate-500/10 text-slate-400 border-slate-500/30',
+    low: 'bg-zinc-500/10 text-muted border-zinc-500/30',
   }
   return (
     <span className={`text-xs px-2 py-0.5 rounded border ${styles[confidence] || styles.low}`}>

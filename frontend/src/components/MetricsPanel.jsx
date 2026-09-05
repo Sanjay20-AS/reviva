@@ -3,52 +3,57 @@ export default function MetricsPanel({ metrics }) {
 
   return (
     <div className="mb-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
         <MetricCard
           label="Recovery rate"
           value={`${metrics.recovery_rate_pct}%`}
-          accent="text-emerald-400"
+          delta="of total at-risk events"
         />
         <MetricCard
           label="Amount recovered"
           value={`₹${metrics.total_amount_recovered.toLocaleString('en-IN')}`}
-          accent="text-emerald-400"
-          sub={`of ₹${metrics.total_amount_at_risk.toLocaleString('en-IN')} at risk`}
+          delta={`of ₹${metrics.total_amount_at_risk.toLocaleString('en-IN')} at risk`}
         />
         <MetricCard
           label="Diagnosis accuracy"
           value={`${metrics.diagnosis_accuracy_pct}%`}
-          accent="text-sky-400"
+          delta="vs. ground truth"
         />
-        <MetricCard label="Total events" value={metrics.total_events} />
+        <MetricCard
+          label="Total events"
+          value={metrics.total_events}
+          delta="processed in this batch"
+        />
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <StatusChip label="Recovered" count={metrics.recovered_count} color="bg-emerald-500" />
-        <StatusChip label="Not recovered" count={metrics.not_recovered_count} color="bg-red-500" />
-        <StatusChip label="Pending manual action" count={metrics.pending_manual_count} color="bg-amber-500" />
+      <div className="grid grid-cols-3 gap-4 mb-4">
+        <StatusCard label="Recovered" count={metrics.recovered_count} dot="bg-emerald-500" />
+        <StatusCard label="Not recovered" count={metrics.not_recovered_count} dot="bg-red-500" />
+        <StatusCard label="Pending manual action" count={metrics.pending_manual_count} dot="bg-amber-500" />
       </div>
 
       {metrics.exceptions?.length > 0 && (
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
-          <h3 className="text-sm font-semibold text-slate-300 mb-3">
-            Exceptions — honest reporting, not cherry-picked
-          </h3>
-          <div className="max-h-48 overflow-y-auto space-y-1">
-            {metrics.exceptions.map((e) => (
-              <div
-                key={e.event_id}
-                className="flex justify-between text-sm text-slate-400 py-1 border-b border-slate-800/50 last:border-0"
-              >
-                <span>{e.event_id}</span>
-                <span className="text-slate-500">{e.predicted_cause}</span>
-                <span>₹{e.amount.toLocaleString('en-IN')}</span>
+        <div className="card p-5">
+          <div className="text-sm font-medium text-zinc-200 mb-1">Exceptions</div>
+          <div className="text-xs text-muted mb-3">
+            Honest reporting — every unresolved case, not a cherry-picked subset
+          </div>
+          <div className="divide-y divide-border">
+            {metrics.exceptions.slice(0, 8).map((e) => (
+              <div key={e.event_id} className="flex items-center justify-between py-2 text-sm">
+                <span className="font-mono text-muted">{e.event_id}</span>
+                <span className="text-zinc-400 capitalize">
+                  {e.predicted_cause.replace(/_/g, ' ')}
+                </span>
+                <span className="text-zinc-200">₹{e.amount.toLocaleString('en-IN')}</span>
                 <span
-                  className={
-                    e.outcome === 'not_recovered' ? 'text-red-400' : 'text-amber-400'
-                  }
+                  className={`text-xs px-2 py-0.5 rounded-full border ${
+                    e.outcome === 'not_recovered'
+                      ? 'text-red-400 border-red-500/30 bg-red-500/10'
+                      : 'text-amber-400 border-amber-500/30 bg-amber-500/10'
+                  }`}
                 >
-                  {e.outcome.replace('_', ' ')}
+                  {e.outcome.replace(/_/g, ' ')}
                 </span>
               </div>
             ))}
@@ -59,22 +64,22 @@ export default function MetricsPanel({ metrics }) {
   )
 }
 
-function MetricCard({ label, value, accent = 'text-slate-100', sub }) {
+function MetricCard({ label, value, delta }) {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
-      <div className="text-slate-400 text-sm mb-1">{label}</div>
-      <div className={`text-2xl font-semibold ${accent}`}>{value}</div>
-      {sub && <div className="text-xs text-slate-500 mt-1">{sub}</div>}
+    <div className="card p-5">
+      <div className="text-sm text-muted mb-2">{label}</div>
+      <div className="text-3xl font-semibold tracking-tight text-zinc-50 mb-1">{value}</div>
+      <div className="text-xs text-muted">{delta}</div>
     </div>
   )
 }
 
-function StatusChip({ label, count, color }) {
+function StatusCard({ label, count, dot }) {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex items-center gap-3">
-      <span className={`w-2.5 h-2.5 rounded-full ${color}`} />
-      <span className="text-slate-300 text-sm">{label}</span>
-      <span className="ml-auto font-semibold">{count}</span>
+    <div className="card px-4 py-3 flex items-center gap-3">
+      <span className={`w-2 h-2 rounded-full ${dot}`} />
+      <span className="text-sm text-zinc-300">{label}</span>
+      <span className="ml-auto text-sm font-semibold text-zinc-100">{count}</span>
     </div>
   )
 }
