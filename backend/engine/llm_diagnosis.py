@@ -14,7 +14,7 @@ import os
 import json
 import google.generativeai as genai
 
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-3.6-flash"
 
 VALID_CAUSES = {
     "issuer_decline",
